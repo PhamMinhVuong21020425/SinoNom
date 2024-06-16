@@ -1,0 +1,137 @@
+.create-container {
+    padding: 5em 10px;
+    text-align: center;
+    max-width: 1420px;
+    .create-header {
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 900 !important;
+        text-align: center;
+        color: #000000;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .create-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .import-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 264px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            background-color: #f4f4f4;
+            margin-top: 70px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+            width: 1030px;
+            .upload-box {
+                margin-right: 30px;
+                height: 100%;
+                width: 60%;
+                height: calc(100% - 40px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 2px dashed #ccc;
+                background-color: hsla(0, 0%, 100%, 0.6);
+                border-radius: 10px;
+                .upload-title {
+                    font-size: 18px;
+                    line-height: 1.4;
+                    cursor: pointer;
+                }
+            }
+            .model-info {
+                .model-name {
+                    margin-left: 20px;
+                    text-align: start;
+                    .header {
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding-bottom: 10px;
+                        .force {
+                            color: red;
+                        }
+                    }
+
+                    .name-button {
+                        border-color: #e1e1e1;
+                        padding: 0 13px;
+                        background-color: #dae5ff;
+                        border: 1px solid #e2e2e2;
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 40px;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        overflow: auto;
+                        &:focus {
+                            box-shadow: none;
+                            outline: 0;
+                        }
+                    }
+                }
+                .model-button {
+                    text-align: center !important;
+
+                    .button {
+                        border: none;
+                        margin-top: 30px;
+                        cursor: pointer;
+                        position: relative;
+                        display: inline-flex;
+                        border-radius: 30px;
+                        min-width: 200px;
+                        padding: 13px;
+                        background-color: rgba(16, 191, 81, 0.2);
+                        text-align: center;
+                        color: #fff;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            transition: background-color 0.3s ease;
+                            border: 4px solid transparent;
+                            border-radius: 30px;
+                            background-color: #10bf51;
+                            background-clip: content-box;
+                        }
+                        &:hover {
+                            &:before {
+                                background-color: #089c41;
+                            }
+                        }
+                        .button-text {
+                            position: relative;
+                            z-index: 100;
+                            font-size: 16px;
+                            line-height: 1.65;
+                            font-weight: 700 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 739px) {
+    .create-container {
+        .create-content {
+            .import-box {
+                .upload-box {
+                    margin-left: 1em;
+                    margin-right: 0 !important;
+                }
+            }
+        }
+    }
+}

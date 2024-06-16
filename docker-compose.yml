@@ -1,0 +1,39 @@
+services:
+    frontend:
+        container_name: sino-nom-frontend
+        build:
+            context: OCR_Nom_Text
+            dockerfile: Dockerfile
+        ports:
+            - "3000:3000"
+        volumes:
+            - frontend_volume:/app
+            - /app/node_modules
+        networks:
+            - internal
+
+    backend:
+        container_name: sino-nom-api
+        environment:
+            PORT: ${PORT}
+        build:
+            context: server
+            dockerfile: Dockerfile
+            args:
+                - PORT=${PORT}
+        ports:
+            - "${PORT}:${PORT}"
+        volumes:
+            - backend_volume:/server
+            - /usr/lib/
+        networks:
+            - internal
+        restart: unless-stopped
+
+volumes:
+    frontend_volume:
+    backend_volume:
+
+networks:
+    internal:
+        driver: bridge

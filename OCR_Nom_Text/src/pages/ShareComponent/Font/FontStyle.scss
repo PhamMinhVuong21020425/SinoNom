@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Inter';
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-size: 1.6rem;
+}
+button,
+input {
+    outline: none;
+    border: none;
+}
+a {
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+input:checked {
+    border-color: #1d5193 !important;
+    background-color: #fff !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='10' viewBox='0 0 15 10' fill='none'%3E %3Cpath d='M13 2L5.3 9L2 6.375' stroke='%231D5193' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='square'/%3E %3C/svg%3E");
+}
+select:required:invalid {
+    color: gray !important;
+}
+select {
+    &:focus {
+        outline: none;
+    }
+}
+option {
+    color: black;
+    height: 50px;
+}
+.ant-modal-mask {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
